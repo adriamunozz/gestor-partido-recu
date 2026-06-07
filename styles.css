@@ -1,0 +1,183 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #222;
+}
+
+/* Cabecera */
+.cabecera {
+    background-color: #223a5e;
+    color: white;
+    text-align: center;
+    padding: 24px 16px;
+}
+
+.cabecera h1 {
+    margin: 0 0 8px;
+}
+
+/* Estructura principal */
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: 24px auto;
+}
+
+.bloque {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    border: 1px solid #ccd6e0;
+}
+
+h2 {
+    color: #223a5e;
+}
+
+/* Marcador */
+.marcador {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.equipo {
+    flex: 1;
+    text-align: center;
+    padding: 16px;
+    border: 2px solid #ccd6e0;
+    border-radius: 10px;
+}
+
+.puntos {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #223a5e;
+    margin: 12px 0;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+label {
+    width: 100%;
+    font-weight: bold;
+}
+
+input {
+    flex: 1;
+    min-width: 220px;
+    padding: 10px;
+    border: 1px solid #8a98a8;
+    border-radius: 6px;
+}
+
+/* Botones */
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #223a5e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #16263f;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #ffbf47;
+}
+
+.reiniciar {
+    background-color: #666;
+}
+
+.reiniciar:hover {
+    background-color: #444;
+}
+
+/* Mensajes */
+.aviso {
+    margin-top: 14px;
+    padding: 10px;
+    background-color: #e8f1ff;
+    border-left: 5px solid #223a5e;
+    border-radius: 6px;
+}
+
+.correcto {
+    background-color: #e6f4ea;
+    border-left-color: #188038;
+}
+
+.error {
+    background-color: #fdecea;
+    border-left-color: #c5221f;
+}
+
+/* Lista de jugadores */
+.lista {
+    padding: 0;
+    list-style: none;
+}
+
+.lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: #f8fafc;
+    border: 1px solid #ccd6e0;
+    border-radius: 6px;
+}
+
+.lista button {
+    background-color: #c5221f;
+}
+
+.lista button:hover {
+    background-color: #891713;
+}
+
+/* Pie */
+.pie {
+    text-align: center;
+    padding: 16px;
+    background-color: #223a5e;
+    color: white;
+}
+
+/* Responsive básico */
+@media (max-width: 650px) {
+    .marcador {
+        flex-direction: column;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+}

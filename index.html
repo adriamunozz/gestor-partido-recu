@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Partido</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecera">
+        <h1>Gestor de Partido</h1>
+        <p>Marcador y lista de jugadores del club.</p>
+    </header>
+
+    <main>
+        <!-- Marcador del partido -->
+        <section class="bloque">
+            <h2>Marcador</h2>
+
+            <div class="marcador">
+                <article class="equipo">
+                    <h3>Equipo Azul</h3>
+                    <p id="puntos-azul" class="puntos">0</p>
+                    <button id="btn-azul" type="button">Sumar punto</button>
+                </article>
+
+                <article class="equipo">
+                    <h3>Equipo Rojo</h3>
+                    <p id="puntos-rojo" class="puntos">0</p>
+                    <button id="btn-rojo" type="button">Sumar punto</button>
+                </article>
+            </div>
+
+            <button id="btn-reiniciar" class="reiniciar" type="button">Reiniciar marcador</button>
+
+            <p id="estado-partido" class="aviso" aria-live="polite">
+                El partido está preparado para empezar.
+            </p>
+        </section>
+
+        <!-- Gestión de jugadores -->
+        <section class="bloque">
+            <h2>Jugadores</h2>
+
+            <form id="form-jugador">
+                <label for="nombre-jugador">Nombre del jugador</label>
+                <input
+                    type="text"
+                    id="nombre-jugador"
+                    name="nombre-jugador"
+                    placeholder="Escribe un nombre"
+                    autocomplete="off"
+                >
+                <button type="submit">Añadir jugador</button>
+            </form>
+
+            <p id="mensaje-jugador" class="aviso" aria-live="polite"></p>
+
+            <h3>Lista actual</h3>
+            <ul id="lista-jugadores" class="lista"></ul>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>Gestor web de partido - RA2</p>
+    </footer>
+
+</body>
+</html>
